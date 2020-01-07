@@ -25,7 +25,7 @@ func JSON(w http.ResponseWriter, data interface{}) {
 type User struct {
 	ID   int    `json:"id"`
 	Name string `json:"userName"`
-	Date int64  `json:"data"`
+	Date int64  `json:"date"`
 }
 
 // graphql output difinition
