@@ -25,6 +25,7 @@ func JSON(w http.ResponseWriter, data interface{}) {
 type User struct {
 	ID   int    `json:"id"`
 	Name string `json:"userName"`
+	Date int64  `json:"data"`
 }
 
 // graphql output difinition
@@ -36,6 +37,9 @@ var UserType = graphql.NewObject(graphql.ObjectConfig{
 		},
 		"name": &graphql.Field{
 			Type: graphql.String,
+		},
+		"date": &graphql.Field{
+			Type: DateTime,
 		},
 	},
 })
